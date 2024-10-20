@@ -1,0 +1,141 @@
+[
+    {
+        "version_name": "Movie Review Sentiment",
+        "sample_size": 1000,
+        "dataset": "sst",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Movie Review Sentiment\\model.safetensors",
+        "output_mode": 1,
+        "continuous_label": "Sentiment",
+        "learning_rate": 1e-05,
+        "batch_size": 8,
+        "epochs": 5,
+        "weight_decay": 0.05,
+        "mean_squared_error": 0.024135185483315204,
+        "mean_absolute_error": 0.11888859562575817,
+        "r2_score": 0.6408205847382107,
+        "societally linear": "yes"
+    },
+    {
+        "version_name": "Tweet Sentiment",
+        "sample_size": 2000,
+        "dataset": "sentiment140",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Tweet Sentiment\\pytorch_model.bin",
+        "output_mode": 3,
+        "class_labels": [
+            "Negative Sentiment",
+            "Neutral Sentiment",
+            "Positive Sentiment"
+        ],
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 3,
+        "weight_decay": 0.01,
+        "f1_score": 0.503094460221507,
+        "accuracy": 0.5943775100401606,
+        "societally linear": "yes"
+    },
+    {
+        "version_name": "Poem Sentiment",
+        "sample_size": 500,
+        "dataset": "poem_sentiment",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Poem Sentiment\\model.safetensors",
+        "output_mode": 4,
+        "class_labels": [
+            "No Impact",
+            "Negative",
+            "Positive",
+            "Mixed"
+        ],
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 3,
+        "weight_decay": 0.01,
+        "f1_score": 0.6318681318681318,
+        "accuracy": 0.7115384615384616,
+        "societally linear": "no"
+    },
+    {
+        "version_name": "Emotion Classification",
+        "sample_size": 1500,
+        "dataset": "dair-ai/emotion",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Emotion Classification\\model.safetensors",
+        "output_mode": 6,
+        "class_labels": [
+            "Sadness",
+            "Joy",
+            "Love",
+            "Anger",
+            "Fear",
+            "Suprise"
+        ],
+        "learning_rate": 1e-05,
+        "batch_size": 8,
+        "epochs": 10,
+        "weight_decay": 0.02,
+        "f1_score": 0.8173194168613045,
+        "accuracy": 0.8213333333333334,
+        "societally linear": "no"
+    },
+    {
+        "version_name": "GPT Political Ideology",
+        "sample_size": 500,
+        "dataset": "JyotiNayak/political_ideologies",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\GPT Political Ideology\\model.safetensors",
+        "output_mode": 2,
+        "class_labels": [
+            "Conservatism",
+            "Liberalism"
+        ],
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 3,
+        "weight_decay": 0.01,
+        "f1_score": 0.9343589743589744,
+        "accuracy": 0.934375,
+        "societally linear": "yes"
+    },
+    {
+        "version_name": "Politifact Fake News Detection",
+        "sample_size": 1500,
+        "dataset": "Cartinoe5930/Politifact_fake_news",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Politifact Fake News Detection\\model.safetensors",
+        "output_mode": 2,
+        "class_labels": [
+            "True News",
+            "Fake News"
+        ],
+        "learning_rate": 1e-05,
+        "batch_size": 8,
+        "epochs": 10,
+        "weight_decay": 0.02,
+        "f1_score": 0.6648565132304453,
+        "accuracy": 0.668,
+        "societally linear": "yes"
+    },
+    {
+        "version_name": "Sustainability Business Impact",
+        "sample_size": 500,
+        "dataset": "climatebert/climate_sentiment",
+        "model_type": "albert-base-v2",
+        "weights_filepath": "model_versions\\Sustainability Business Impact\\model.safetensors",
+        "output_mode": 3,
+        "class_labels": [
+            "Risk",
+            "Neutral",
+            "opportunity"
+        ],
+        "learning_rate": 2e-05,
+        "batch_size": 16,
+        "epochs": 3,
+        "weight_decay": 0.01,
+        "f1_score": 0.6087372095098248,
+        "accuracy": 0.615625,
+        "societally linear": "yes"
+    }
+]

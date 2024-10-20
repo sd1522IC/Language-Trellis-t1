@@ -1,0 +1,88 @@
+Instructions:
+Run from the main.py.
+Reference the Metadata to find the sentiment context.
+Reference the Dataset.config to find the dataset information.
+Ensure you have a your_Dataset.csv in your directory. The your_dataset(N) is for news articles. the your_dataset(T) is Trump tweets from 2009. Delete the (N) or (T) to use. 
+
+Run this Import:
+Run this command (just run this in your terminal and it should install all required (configured on windows so perhaps macOS is different):
+pip install -U numpy tqdm torch datasets scikit-learn gensim nltk plotly sentence-transformers bertopic umap-learn hdbscan transformers[torch] emoji concurrent.futures pandas sentencepiece
+
+
+
+Exact Imports split per module for Reference: 
+
+main.py:
+from dataset_handling import DatasetHandler
+from alb_s1 import ALBERTSentimentFineTuner, ALBERTSentimentInferencer, SentimentCSVDataSaver
+from lda_module import LDATextProcessor, LDAProcessor, LDACSVDataSaver
+from bertopic_module import BERTopicProcessor, BERTopicCSVDataSaver
+from kcluster_module import TextProcessingAndDatabase, KclusterAnalysis, KclusterCSVDataSaver
+from metadata_module import MetadataCSVDataSaver
+
+albs1:
+import concurrent.futures
+from tqdm import tqdm 
+import re
+import emoji
+import torch
+from datasets import load_dataset, Dataset
+import torch.nn.functional as F
+import json
+import os
+import time
+import random
+import numpy as np
+from transformers import (
+    AlbertTokenizer,
+    AlbertForSequenceClassification,
+    Trainer,
+    TrainingArguments,
+    DataCollatorWithPadding,
+    AlbertConfig
+)
+from sklearn.metrics import f1_score, accuracy_score, mean_squared_error, mean_absolute_error, r2_score
+
+LDA:
+import re
+import numpy as np
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from gensim import corpora, models
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+from tqdm import tqdm 
+
+Kcluster:
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+import numpy as np
+import nltk
+from tqdm import tqdm  
+
+
+BERTopic:
+import re
+import numpy as np
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from bertopic import BERTopic
+from sentence_transformers import SentenceTransformer
+import umap
+from sklearn.cluster import AgglomerativeClustering
+from hdbscan import HDBSCAN
+from plotly.io import to_json
+
+DataVis:
+import pandas as pd
+import plotly.graph_objects as go
+import re
+import numpy as np
+from sklearn.manifold import TSN
+
+to install:
+pip install sentence piece
+pip install transformers[torch]
+
